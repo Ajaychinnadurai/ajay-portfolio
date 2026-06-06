@@ -44,12 +44,12 @@ const HeroSection = () => {
   useEffect(() => {
     let fired = false;
 
-      const goToAbout = () => {
-        if (fired) return;
-        fired = true;
-        const about = document.getElementById('about');
-        if (about) about.scrollIntoView({ behavior: 'auto', block: 'start' });
-      };
+    const goToAbout = () => {
+      if (fired) return;
+      fired = true;
+      const about = document.getElementById('about');
+      if (about) about.scrollIntoView({ behavior: 'auto', block: 'start' });
+    };
 
     const onWheel = (e: WheelEvent) => {
       if (fired) return;
@@ -144,13 +144,13 @@ const HeroSection = () => {
                 className="font-black uppercase leading-[0.88] tracking-tight text-white"
                 style={{ fontSize: 'clamp(3rem, 12vw, 10.5rem)' }}
               >
-                Harsh<br />Goyal
+                Ajay<br />C
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.85} y={20}>
               <p className="mt-5 md:mt-7 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-[0.3em] text-white/75">
-                Developer · Designer · GenAI Integration
+                AI & Data Science Specialist
               </p>
             </FadeIn>
           </div>

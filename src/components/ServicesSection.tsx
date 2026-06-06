@@ -4,33 +4,33 @@ import FadeIn from './FadeIn';
 const SERVICES = [
   {
     number: '01',
-    title: 'UI/UX Design',
+    title: 'Machine Learning Solutions',
     description:
-      'Designing clean, intuitive interfaces that prioritise user flow, hierarchy, and visual clarity — turning ideas into experiences people actually enjoy using.',
+      'Designing and developing end-to-end ML pipelines including regression, classification, clustering, feature engineering, and rigorous model evaluation to solve complex data challenges.',
   },
   {
     number: '02',
-    title: 'Front-end Development',
+    title: 'Deep Learning & Neural Networks',
     description:
-      'Building responsive, performant web apps with React, TypeScript, and Tailwind — pixel-perfect on every screen, deployed seamlessly on Vercel.',
+      'Building and optimising deep neural architectures such as LSTMs, RNNs, and CNNs with TensorFlow, Keras, and PyTorch for advanced time-series and trend forecasting.',
   },
   {
     number: '03',
-    title: 'GenAI Integration',
+    title: 'Business Intelligence & Power BI',
     description:
-      'Wiring large language models into real products via Gemini, Claude, and OpenAI APIs — from resume reviewers to AI tutors and beyond.',
+      'Creating interactive, custom Power BI dashboards utilizing advanced DAX measures to track MoM/YoY growth and deliver clear, actionable insights for key business metrics.',
   },
   {
     number: '04',
-    title: 'Prompt Engineering & LLM Automation',
+    title: 'Data Analysis & Insights',
     description:
-      'Crafting reliable prompts and automation flows that turn LLMs into production-grade tools for content, analysis, and decision support.',
+      'Performing Exploratory Data Analysis (EDA), data cleaning, preprocessing, and normalization using Python (Pandas, NumPy, Matplotlib, Seaborn) to uncover underlying patterns.',
   },
   {
     number: '05',
-    title: 'Data Analysis & Visualization',
+    title: 'Web API & Database Integration',
     description:
-      'Exploring datasets with Python (Pandas, NumPy, Seaborn) and Power BI — turning raw numbers into clear insights and dashboards stakeholders can act on.',
+      'Deploying trained ML/DL models via REST APIs using Flask, backed by robust data systems including relational (MySQL) and non-relational (MongoDB) databases.',
   },
 ];
 

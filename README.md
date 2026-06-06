@@ -1,6 +1,6 @@
-# Harsh Goyal — Developer & Designer Portfolio
+# Ajay C — AI & Data Science Portfolio
 
-A dark-themed personal portfolio for **Harsh Goyal** — Computer Science graduate from NSUT, currently a Content R&D Trainee at PhysicsWallah. Focused on UI/UX, front-end development, and GenAI integration.
+A dark-themed personal portfolio for **Ajay C** — AI & Data Science Specialist, M.Sc. Artificial Intelligence student at Bharathiar University.
 
 Built with **React + TypeScript + Vite + Tailwind CSS + Framer Motion**. Designed for one-click deployment on **Vercel**.
 
@@ -77,4 +77,4 @@ src/
 
 ## Credits
 
-Designed & built by **Harsh Goyal** · [LinkedIn](https://www.linkedin.com/in/harsh-goyal-7900b2256/) · [GitHub](https://github.com/harshgoyal27)
+Designed & built by **Ajay C** · [LinkedIn](https://www.linkedin.com/in/ajay-c-03a707286/) · [GitHub](https://github.com/Ajaychinnadurai)

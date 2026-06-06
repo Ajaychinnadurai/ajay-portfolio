@@ -14,41 +14,32 @@ interface ProjectData {
 }
 
 const PROJECTS: ProjectData[] = [
-    {
-        number: '01',
-        category: 'Personal',
-        name: 'Forge',
-        liveUrl: 'https://forge-pink-seven.vercel.app/',
-        col1Image1: '/Forge.png',
-        col1Image2: '/Forge1.png',
-        col2Image: '/Forge2.png',
-      },
   {
-      number: '02',
-      category: 'Personal',
-      name: 'LawLab',
-      liveUrl: 'https://lawlab-self.vercel.app',
-      col1Image1: '/lawlab.png',
-      col1Image2: '/lawlab1.png',
-      col2Image: '/lawlab2.png',
-    },
-  {
-    number: '03',
-    category: 'Personal · GenAI',
-    name: 'ResumeIQ',
-    liveUrl: 'https://resumeiq-harsh.vercel.app/',
-    col1Image1: '/resumeiq-hero.png',
-    col1Image2: '/resumeiq-feedback.png',
-    col2Image: '/resumeiq-score.png',
+    number: '01',
+    category: 'Machine Learning · Deep Learning',
+    name: 'LSTM Stock Predictor',
+    liveUrl: '#',
+    col1Image1: '/deep_learning_network.png',
+    col1Image2: '/stock_analysis_1.png',
+    col2Image: '/stock_analysis_1.png',
   },
   {
-    number: '04',
-    category: 'Personal · Design',
-    name: 'Notch',
-    liveUrl: 'https://notch-zeta.vercel.app/',
-    col1Image1: '/notch-hero.png',
-    col1Image2: '/notch-pricing.png',
-    col2Image: '/notch-mockup.png',
+    number: '02',
+    category: 'Business Intelligence · DAX',
+    name: 'Retail Sales Dashboard',
+    liveUrl: '#',
+    col1Image1: '/bi_charts.png',
+    col1Image2: '/retail_dashboard_1.png',
+    col2Image: '/retail_dashboard_1.png',
+  },
+  {
+    number: '03',
+    category: 'HR Analytics · Power BI',
+    name: 'Employee Performance',
+    liveUrl: '#',
+    col1Image1: '/bi_charts.png',
+    col1Image2: '/employee_dashboard_1.png',
+    col2Image: '/employee_dashboard_1.png',
   },
 ];
 
@@ -109,9 +100,11 @@ const ProjectCard = ({ project, index, total, containerRef }: ProjectCardProps) 
                       </div>
                     </div>
 
-                    <div className="shrink-0 self-start sm:self-auto pt-1 sm:pt-2 md:pt-3 w-full sm:w-auto">
-                      <LiveProjectButton href={project.liveUrl} className="w-full sm:w-auto" />
-                    </div>
+                    {project.liveUrl && project.liveUrl !== '#' && (
+                      <div className="shrink-0 self-start sm:self-auto pt-1 sm:pt-2 md:pt-3 w-full sm:w-auto">
+                        <LiveProjectButton href={project.liveUrl} className="w-full sm:w-auto" />
+                      </div>
+                    )}
                   </div>
 
         {/* Bottom row: two-column image grid */}
