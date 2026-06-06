@@ -40,6 +40,39 @@ const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Try to autoplay unmuted on mount, fallback to muted if blocked
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    const attemptPlay = async () => {
+      v.muted = false;
+      setMuted(false);
+      try {
+        await v.play();
+      } catch (err) {
+        // Autoplay unmuted blocked, fallback to muted autoplay
+        console.log("Autoplay unmuted blocked, falling back to muted", err);
+        v.muted = true;
+        setMuted(true);
+        await v.play().catch(e => console.error("Muted autoplay failed", e));
+      }
+    };
+
+    attemptPlay();
+  }, []);
+
+  // Loop the video but play muted from the second time onwards
+  const handleVideoEnded = () => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    v.muted = true;
+    setMuted(true);
+    v.currentTime = 0;
+    v.play().catch((err) => console.error("Loop playback failed", err));
+  };
+
   // Snap-scroll: one wheel tick / keypress while at top → jump to About
   useEffect(() => {
     let fired = false;
@@ -91,9 +124,9 @@ const HeroSection = () => {
         ref={videoRef}
         autoPlay
         muted
-        loop
         playsInline
         preload="auto"
+        onEnded={handleVideoEnded}
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/intro.mp4" type="video/mp4" />
